@@ -1,6 +1,8 @@
 import { uuid } from './util.js'
 
 export default class Visit {
+  started = false
+
   constructor (delegate, location, restorationIdentifier, options = {}) {
     this.delegate = delegate
     this.location = location
@@ -9,7 +11,12 @@ export default class Visit {
   }
 
   start () {
-    this.adapter.visitStarted(this)
+    console.log('Visit#start')
+    if (!this.started) {
+      this.adapter.visitStarted(this)
+      this.delegate.visitStarted(this)
+      this.started = true
+    }
   }
 
   get adapter () {

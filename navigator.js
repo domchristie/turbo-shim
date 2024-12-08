@@ -38,7 +38,6 @@ export default class Navigator {
       referrer: this.location,
       ...options
     })
-    this.driver.currentVisit = this.currentVisit
     this.currentVisit.start()
   }
 
