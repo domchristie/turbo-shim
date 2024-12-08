@@ -1,4 +1,4 @@
-import { uuid, expandURL } from './util.js'
+import { expandURL } from './util.js'
 import Visit from './visit.js'
 
 export default class Navigator {
