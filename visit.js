@@ -6,7 +6,7 @@ export default class Visit {
   constructor (delegate, location, restorationIdentifier, options = {}) {
     this.delegate = delegate
     this.location = location
-    this.restorationIdentifier = restorationIdentifier
+    this.restorationIdentifier = restorationIdentifier || uuid()
     this.action = options.action
   }
 
