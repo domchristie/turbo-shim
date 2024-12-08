@@ -15,6 +15,7 @@ export default class Session {
   }
 
   visitProposedToLocation (location, options) {
+    console.log('Session#visitProposedToLocation', location, options)
     // extendURLWithDeprecatedProperties(location)
     if (this.allowsVisitingLocationWithAction(location, options.action)) {
       this.adapter.visitProposedToLocation(location, options)

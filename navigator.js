@@ -32,6 +32,7 @@ export default class Navigator {
   // view
 
   startVisit (locatable, restorationIdentifier, options = {}) {
+    console.log('Navigator#startVisit', locatable, restorationIdentifier, options)
     this.stop()
     this.currentVisit = new Visit(this.driver, expandURL(locatable), restorationIdentifier, {
       referrer: this.location,

@@ -30,32 +30,37 @@ export default class Visit {
   identifier = uuid()
 
   issueRequest () {
+    console.log('Visit#issueRequest')
     this.delegate.issueRequest(this)
   }
 
   changeHistory () {
+    console.log('Visit#changeHistory')
     this.delegate.changeHistory(this)
   }
 
   loadCachedSnapshot () {
+    console.log('Visit#loadCachedSnapshot')
     this.delegate.loadCachedSnapshot(this)
   }
 
   loadResponse () {
+    console.log('Visit#loadResponse')
     this.delegate.loadResponse(this)
   }
 
   cancel () {
+    console.log('Visit#cancel')
     this.delegate.cancelVisit(this)
   }
 
   hasCachedSnapshot () {
-    this.delegate.hasCachedSnapshot(this)
-    return false
+    console.log('Visit#hasCachedSnapshot')
+    return this.delegate.hasCachedSnapshot(this)
   }
 
   get isPageRefresh () {
+    console.log('Visit#isPageRefresh')
     this.delegate.isPageRefresh(this)
-    return false
   }
 }
